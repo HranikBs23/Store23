@@ -1,0 +1,44 @@
+﻿@model Store23.Models.Category
+
+
+<h1>Edit Book</h1>
+
+<form method="post" asp-action="Edit">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Create Category</h2>
+			<hr />
+		</div>
+		<div asp-validation-summary="All"></div>
+		<input type="hidden" asp-for="CategoryId" />
+
+		<div class="mb-3">
+			<label asp-for="CategoryName"> Category Name</label>
+			<input asp-for="CategoryName" class="form-control" />
+			<span asp-validation-for="CategoryName" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="CategoryDescription "> Category Description</label>
+			<input asp-for="CategoryDescription " class="form-control" />
+			<span asp-validation-for="CategoryDescription" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="DisplayOrder">Order </label>
+			<input asp-for="DisplayOrder" class="form-control" />
+			<span asp-validation-for="DisplayOrder" class="text-danger"></span>
+		</div>
+		<button type="submit" class="btn btn-primary" style="width:150px">Edit</button>
+		<a asp-controller="Category" asp-action="Index" class="btn btn-danger" style="width:150px">
+			Back to List
+		</a>
+	</div>
+</form>
+
+
+
+@section Scripts{
+	@{
+		//client side validation
+		<partial name="_ValidationScriptsPartial" />
+	}
+}

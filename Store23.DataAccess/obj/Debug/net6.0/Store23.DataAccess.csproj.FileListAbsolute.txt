@@ -1,0 +1,17 @@
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\bin\Debug\net6.0\Store23.DataAccess.deps.json
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\bin\Debug\net6.0\Store23.DataAccess.runtimeconfig.json
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\bin\Debug\net6.0\Store23.DataAccess.dll
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\bin\Debug\net6.0\Store23.DataAccess.pdb
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\bin\Debug\net6.0\Store23.Models.dll
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\bin\Debug\net6.0\Store23.Models.pdb
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\obj\Debug\net6.0\Store23.DataAccess.csproj.AssemblyReference.cache
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\obj\Debug\net6.0\Store23.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\obj\Debug\net6.0\Store23.DataAccess.AssemblyInfoInputs.cache
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\obj\Debug\net6.0\Store23.DataAccess.AssemblyInfo.cs
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\obj\Debug\net6.0\Store23.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\obj\Debug\net6.0\Store23.DataAccess.csproj.CopyComplete
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\obj\Debug\net6.0\Store23.DataAccess.dll
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\obj\Debug\net6.0\refint\Store23.DataAccess.dll
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\obj\Debug\net6.0\Store23.DataAccess.pdb
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\obj\Debug\net6.0\Store23.DataAccess.genruntimeconfig.cache
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.DataAccess\obj\Debug\net6.0\ref\Store23.DataAccess.dll

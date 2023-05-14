@@ -1,0 +1,12 @@
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.Utility\bin\Debug\net6.0\Store23.Utility.deps.json
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.Utility\bin\Debug\net6.0\Store23.Utility.dll
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.Utility\bin\Debug\net6.0\Store23.Utility.pdb
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.Utility\obj\Debug\net6.0\Store23.Utility.csproj.AssemblyReference.cache
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.Utility\obj\Debug\net6.0\Store23.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.Utility\obj\Debug\net6.0\Store23.Utility.AssemblyInfoInputs.cache
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.Utility\obj\Debug\net6.0\Store23.Utility.AssemblyInfo.cs
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.Utility\obj\Debug\net6.0\Store23.Utility.csproj.CoreCompileInputs.cache
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.Utility\obj\Debug\net6.0\Store23.Utility.dll
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.Utility\obj\Debug\net6.0\refint\Store23.Utility.dll
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.Utility\obj\Debug\net6.0\Store23.Utility.pdb
+C:\Users\BS-1019\Desktop\Projects\Store23Web\Store23.Utility\obj\Debug\net6.0\ref\Store23.Utility.dll
