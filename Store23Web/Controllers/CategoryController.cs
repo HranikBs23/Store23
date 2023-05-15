@@ -1,26 +1,32 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Store23.DataAccess;
+using Store23.DataAccess.Repository.IRepository;
 using Store23.Models;
 
 namespace Store23Web.Controllers
 {
     public class CategoryController : Controller
 
-
+        
     {
-
-        //Dependency 
-        private readonly StoreDbContext _db;
-        private readonly ILogger _logger;
-        private readonly IWebHostEnvironment _env;
-
-        public CategoryController(StoreDbContext db , ILogger<CategoryController> logger , IWebHostEnvironment env) 
+		private readonly ICategoryRepository _dbContext;
+        public CategoryController(ICategoryRepository dbContext)
         {
-
-            _db = db;
-            _logger = logger;
-            _env = env;
+            _dbContext = dbContext;
         }
+
+		//Dependency 
+		//private readonly StoreDbContext _db;
+       // private readonly ILogger _logger;
+       // private readonly IWebHostEnvironment _env;
+
+       // public CategoryController(StoreDbContext db , ILogger<CategoryController> logger , IWebHostEnvironment env) 
+       // {
+
+           // _db = db;
+           // _logger = logger;
+           // _env = env;
+       // }
     
 
 
@@ -29,7 +35,7 @@ namespace Store23Web.Controllers
 
             //retrieve categories and convert to list
 
-            IEnumerable<Category> objCategoryList = _db.Categories;
+            IEnumerable<Category> objCategoryList = _dbContext.GetAll();
 
            return View(objCategoryList);
     }
@@ -53,8 +59,8 @@ namespace Store23Web.Controllers
             }
             if (ModelState.IsValid)
             {
-                _db.Categories.Add(obj);
-                _db.SaveChanges();
+                _dbContext.Add(obj);
+                _dbContext.Save();
                 TempData["Success"] = "Category Created Successfully";
                 return RedirectToAction("Index");
             }
@@ -69,8 +75,8 @@ namespace Store23Web.Controllers
             if (id == null || id == 0){
                 return NotFound();
             }
-            //var category = _db.Categories.FirstOrDefault(a => a.CategoryId ==id);
-            var category = _db.Categories.Find(id);
+            var category = _dbContext.GetFirstOrDefault(a => a.CategoryId ==id);
+            
             if (category == null) { 
             
                 return NotFound();
@@ -89,8 +95,8 @@ namespace Store23Web.Controllers
 			}
 			if (ModelState.IsValid)
 			{
-				_db.Categories.Update(editObj);
-				_db.SaveChanges();
+				_dbContext.Update(editObj);
+				_dbContext.Save();
                 TempData["Success"] = "Category Updated Successfully";
 				return RedirectToAction("Index");
 			}
@@ -107,8 +113,8 @@ namespace Store23Web.Controllers
 			{
 				return NotFound();
 			}
-			var deleteCategory = _db.Categories.Find(id);
-			//var categoryFromDbFirst = _db.Categories.FirstOrDefault(u=>u.Id==id);
+			//var deleteCategory = _db.Categories.Find(id);
+			var deleteCategory = _dbContext.GetFirstOrDefault(u=>u.CategoryId==id);
 			//var categoryFromDbSingle = _db.Categories.SingleOrDefault(u => u.Id == id);
 
 			if (deleteCategory == null)
@@ -124,14 +130,14 @@ namespace Store23Web.Controllers
 		[ValidateAntiForgeryToken]
 		public IActionResult DeletePOST(int? id)
 		{
-			var obj = _db.Categories.Find(id);
-			if (obj == null)
+			var deleteCategory = _dbContext.GetFirstOrDefault(u => u.CategoryId == id);
+			if (deleteCategory == null)
 			{
 				return NotFound();
 			}
 
-			_db.Categories.Remove(obj);
-			_db.SaveChanges();
+			_dbContext.Remove(deleteCategory);
+			_dbContext.Save();
             TempData["Success"] = "Category Deleted Successfully";
             return RedirectToAction("Index");
 

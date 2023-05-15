@@ -1,7 +1,6 @@
 using Store23.DataAccess;
 using Microsoft.EntityFrameworkCore;
-
-
+using Store23.DataAccess.Repository.IRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +14,7 @@ builder.Services.AddDbContext<StoreDbContext>(options => options.UseSqlServer(
 
     ));
 
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
