@@ -1,6 +1,7 @@
 using Store23.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Store23.DataAccess.Repository.IRepository;
+using Store23.DataAccess.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +15,7 @@ builder.Services.AddDbContext<StoreDbContext>(options => options.UseSqlServer(
 
     ));
 
-builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -34,6 +35,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+	  pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

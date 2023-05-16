@@ -11,6 +11,6 @@ namespace Store23.DataAccess.Repository.IRepository
 	{
 
 		void Update(Category obj);
-		void Save();
+
 	}
 }
